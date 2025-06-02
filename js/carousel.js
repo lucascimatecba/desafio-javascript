@@ -1,10 +1,10 @@
 let carouselArr = [];
 
 class Carousel {
-    constructor(imagem, titulo, link) {
-        this.imagem = imagem;
-        this.titulo = titulo;
-        this.link = link;
+    constructor(image, title, url) {
+        this.image = image;
+        this.title = title;
+        this.url = url;
     }
 
   static Start(arr) {
@@ -26,8 +26,8 @@ class Carousel {
     const carouselDiv = document.querySelector("#carousel");
     const titleDiv = document.querySelector("#carousel-title");
 
-    carouselDiv.innerHTML = `<img src="img/${item.imagem}">`;
-    titleDiv.innerHTML = `<a href="${item.link}" target="_blank">${item.titulo}</a>`;
+    carouselDiv.innerHTML = `<img src="img/${item.image}">`;
+    titleDiv.innerHTML = `<a href="${item.url}" target="_blank">${item.title}</a>`;
 
     Carousel._sequence++;
     if(Carousel._sequence >= Carousel._size) {
