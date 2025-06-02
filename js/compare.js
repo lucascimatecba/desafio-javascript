@@ -35,7 +35,8 @@ function SetCarToCompare(el, carClass) {
         if(el.checked){
             if(carArr.length >= 2) {
                 alert("Você só pode marcar 2 veículos para apresentar a comparação");
-                el.checked = false;
+                document.querySelectorAll('input[type="checkbox"].checkbox').forEach(checkbox => checkbox.checked = false);
+                carArr = [];
                 return;
             }
             if (GetCarArrPosition(carArr, carClass) === -1) {
